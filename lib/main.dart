@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rbm_app/providers.dart';
-import 'package:rbm_app/view/view_widget/screen/login/login_top.dart';
+import 'package:marie_app/providers.dart';
+import 'package:marie_app/view/view_widget/screen/login/login_top.dart';
+
 
 void main() {
   runApp(
