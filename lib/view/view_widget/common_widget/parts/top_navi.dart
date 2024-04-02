@@ -1,0 +1,1 @@
+import 'package:flutter/cupertino.dart';import 'package:flutter_riverpod/flutter_riverpod.dart';class TopNavi extends ConsumerWidget {  const TopNavi({Key? key}) : super(key: key);  @override  Widget build(BuildContext context,WidgetRef ref) {    //設定ボタン(通知[バイト入室記録、お会計アラート、注文経過時間、在庫切れアラート])    return Container();  }}
