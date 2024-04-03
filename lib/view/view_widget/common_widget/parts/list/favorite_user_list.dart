@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:marie_app/view/view_widget/common_widget/parts/list/user_list.dart';
@@ -36,21 +37,48 @@ class FavoriteUserList extends ConsumerWidget {
             height: 160,
             width: 1000,
             child: Row(
-              //お気に入りユーザーを横スクロール対応で表示
               children: [
                 Expanded(
+                  //お気に入りユーザーを横スクロール対応で表示
                   child: ListView(
-                    // scrollDirection: Axis.horizontal,
+                    // TODO ModelからAPI経由でインスタンスループ,　ListView.builder　へ変更
                     children: const <Widget>[
+                      //-------------------------------------------------User1
                       ListTile(
                         leading: CircleAvatar(
                           backgroundImage:
                               AssetImage('assets/imgs/user_icon.png'),
-                          radius: 40, // CircleAvatarの半径
+                          radius: 40,
                         ),
                       ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 22),
+                        child: Text(
+                          "Jane Doe",
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.pinkAccent,
+                          ),
+                        ),
+                      ),
+
+                      //-------------------------------------------------User2
                       ListTile(
-                        title: Text('johnDoe 　　Jane Doe123'),
+                        leading: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/imgs/user_icon.png'),
+                          radius: 40,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 22),
+                        child: Text(
+                          "Jane Doe",
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.pinkAccent,
+                          ),
+                        ),
                       ),
                     ],
                   ),
