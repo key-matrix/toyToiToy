@@ -18,11 +18,11 @@ class ActiveUserList extends ConsumerWidget {
       //文字列 : オンライン　中央寄せ
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(
-            "オンライン",
-            style: TextStyle(
+            title,
+            style: const TextStyle(
               fontSize: 20,
             ),
           ),
@@ -38,7 +38,7 @@ class ActiveUserList extends ConsumerWidget {
         //     child: Text("オンライン"),
         //   ),
         // ),
-        //ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー実装中
+
         SizedBox(
           height: 150,
           child: ListView.builder(
@@ -50,19 +50,19 @@ class ActiveUserList extends ConsumerWidget {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(60),
                   child: SizedBox(
-                    width: 150,
-                    height: 150,
+                    width: 120,
+                    height: 120,
                     child: children[index],
+
+                    // child: children[index],
                   ),
                 ),
               );
             },
           ),
         ),
-
-        //ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー実装中
       ],
     );
   }
