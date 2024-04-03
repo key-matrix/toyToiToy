@@ -7,16 +7,24 @@ class ActiveUserList extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal, // スクロールの向きを水平方向に指定
-      child: SizedBox(
-        height: 1000,
-        width: 1000,
-        child:
+    return const Column(
+      children: [
+        Text(
+          "オンライン",
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal, // スクロールの向きを水平方向に指定
+          child: SizedBox(
+            height: 400,
+            width: 1000,
             //オンラインユーザーを横スクロール対応で表示
-
-            Text("オンライン"),
-      ),
+            child: Text("オンライン"),
+          ),
+        ),
+      ],
     );
   }
 }
