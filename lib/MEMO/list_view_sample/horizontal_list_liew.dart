@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class HorizontalListView extends StatelessWidget {
-  HorizontalListView({
+  const HorizontalListView({
+    Key? key,
     required this.title,
     required this.children,
-  });
+  }) : super(key: key);
 
   final String title;
   final List<Widget> children;
@@ -43,12 +44,6 @@ class HorizontalListView extends StatelessWidget {
                 );
               },
             ),
-
-            // ListView(
-            //   padding: EdgeInsets.symmetric(horizontal: 8),
-            //   scrollDirection: Axis.horizontal,
-            //   children: children,
-            // ),
           ),
         ],
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../common_widget/parts/list/image_urls_sample.dart';
 import '../../../common_widget/parts/drawer.dart';
 import '../../../common_widget/parts/list/active_user_list.dart';
 import '../../../common_widget/parts/list/favorite_user_list.dart';
@@ -79,9 +80,22 @@ class Home extends ConsumerWidget {
               //お気に入りUserList
               const FavoriteUserList(),
               //オンラインUserList
-              const ActiveUserList(),
+              ActiveUserList(
+                title: 'オンライン',
+                children: _topGourmet,
+              ),
             ],
           ),
         ));
   }
+
+  //画像取得処理(Local,API経由)
+  List<Widget> get _topGourmet => List.generate(
+        ImageUrls.top.length,
+        // Image.asset('assets/imgs/appLogo.png'),
+        (index) => Image.network(
+          ImageUrls.top[index],
+          fit: BoxFit.cover,
+        ),
+      );
 }

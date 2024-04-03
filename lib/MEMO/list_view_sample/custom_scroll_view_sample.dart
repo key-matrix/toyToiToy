@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'horizontal_list_liew.dart';
-import 'image_urls_sample.dart';
+import '../../view/view_widget/common_widget/parts/list/image_urls_sample.dart';
 
 void main() {
   runApp(MyApp());
