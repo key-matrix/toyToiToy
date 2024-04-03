@@ -10,7 +10,7 @@ class ActiveUserList extends ConsumerWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal, // スクロールの向きを水平方向に指定
       child: SizedBox(
-        height: 300,
+        height: 1000,
         width: 1000,
         child:
             //オンラインユーザーを横スクロール対応で表示
