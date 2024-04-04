@@ -94,10 +94,10 @@ class Home extends ConsumerWidget {
 
   //画像取得処理(Local,API経由)
   List<Widget> get _topGourmet => List.generate(
-        ImageUrls.top.length,
+        ImageUrls.onlineUserList.length,
         // Image.asset('assets/imgs/appLogo.png'),
         (index) => Image.network(
-          ImageUrls.top[index],
+          ImageUrls.onlineUserList[index],
           fit: BoxFit.cover,
         ),
       );

@@ -48,11 +48,11 @@ class Home extends StatelessWidget {
               ListView.builder(
                 shrinkWrap: true,
                 physics: ClampingScrollPhysics(),
-                itemCount: ImageUrls.top.length,
+                itemCount: ImageUrls.onlineUserList.length,
                 itemBuilder: (_, int index) {
                   return Card(
                     child: Image.network(
-                      ImageUrls.top[index],
+                      ImageUrls.onlineUserList[index],
                       fit: BoxFit.cover,
                     ),
                   );
@@ -66,9 +66,9 @@ class Home extends StatelessWidget {
   }
 
   List<Widget> get _topGourmet => List.generate(
-      ImageUrls.top.length,
+      ImageUrls.onlineUserList.length,
       (index) => Image.network(
-            ImageUrls.top[index],
+            ImageUrls.onlineUserList[index],
             fit: BoxFit.cover,
           ));
 }
