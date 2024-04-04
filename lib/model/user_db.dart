@@ -1,5 +1,4 @@
 // ユーザー情報(DBから取得後のモデルモック)
-import 'dart:ui';
 
 class Users {
   // プロパティ（フィールド）

@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../providers.dart';
-import '../../common_widget/parts/drawer.dart';
+import '../../../../../providers.dart';
 
 class MyPage extends ConsumerWidget {
   const MyPage({Key? key}) : super(key: key);

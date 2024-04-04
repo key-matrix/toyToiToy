@@ -24,7 +24,7 @@ class FavoriteUserList extends ConsumerWidget {
           scrollDirection: Axis.horizontal, // スクロールの向きを水平方向に指定
           //お気に入りユーザーを横スクロール対応で表示
           child: SizedBox(
-            height: 160,
+            height: 130,
             width: 1000,
             child: Row(
               children: [

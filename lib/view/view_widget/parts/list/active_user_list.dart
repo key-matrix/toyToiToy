@@ -28,7 +28,7 @@ class ActiveUserList extends ConsumerWidget {
           ),
         ),
         SizedBox(
-          height: 150,
+          height: 130,
           child: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             scrollDirection: Axis.horizontal,
