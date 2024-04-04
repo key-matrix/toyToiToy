@@ -78,11 +78,14 @@ class Home extends ConsumerWidget {
                 ),
               ),
               //お気に入りUserList
-              const FavoriteUserList(),
+              FavoriteUserList(
+                title: 'お気に入り',
+                userObject: _topGourmet,
+              ),
               //オンラインUserList
               ActiveUserList(
                 title: 'オンライン',
-                children: _topGourmet,
+                userObject: _topGourmet,
               ),
             ],
           ),

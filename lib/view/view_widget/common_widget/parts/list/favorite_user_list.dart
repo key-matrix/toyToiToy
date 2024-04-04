@@ -1,27 +1,31 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:marie_app/view/view_widget/common_widget/parts/list/user_list.dart';
 
 class FavoriteUserList extends ConsumerWidget {
-  const FavoriteUserList({Key? key}) : super(key: key);
+  const FavoriteUserList(
+      {Key? key, required this.title, required this.userObject})
+      : super(key: key);
+
+  final String title;
+  final List<Widget> userObject;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final List<Map<String, dynamic>> listItems = [
-      {
-        'text': 'Item 1',
-        'color': Colors.blue[600],
-      },
-      {
-        'text': 'Item 2',
-        'color': Colors.blue[300],
-      },
-      {
-        'text': 'Item 3',
-        'color': Colors.blue[100],
-      },
-    ];
+    // final List<Map<String, dynamic>> listItems = [
+    //   {
+    //     'text': 'Item 1',
+    //     'color': Colors.blue[600],
+    //   },
+    //   {
+    //     'text': 'Item 2',
+    //     'color': Colors.blue[300],
+    //   },
+    //   {
+    //     'text': 'Item 3',
+    //     'color': Colors.blue[100],
+    //   },
+    // ];
     return Column(
       children: [
         const Text(
@@ -39,9 +43,9 @@ class FavoriteUserList extends ConsumerWidget {
             child: Row(
               children: [
                 Expanded(
-                  //お気に入りユーザーを横スクロール対応で表示
+                  // TODO ModelからAPI経由でインスタンスループ,　ListView.builder　へ変更
+                  //  　お気に入りユーザーを横スクロール対応で表示
                   child: ListView(
-                    // TODO ModelからAPI経由でインスタンスループ,　ListView.builder　へ変更
                     children: const <Widget>[
                       //-------------------------------------------------User1
                       ListTile(

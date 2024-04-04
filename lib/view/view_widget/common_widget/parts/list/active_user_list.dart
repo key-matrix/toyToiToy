@@ -6,11 +6,11 @@ class ActiveUserList extends ConsumerWidget {
   const ActiveUserList({
     Key? key,
     required this.title,
-    required this.children,
+    required this.userObject,
   }) : super(key: key);
 
   final String title;
-  final List<Widget> children;
+  final List<Widget> userObject;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -45,7 +45,7 @@ class ActiveUserList extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8),
             scrollDirection: Axis.horizontal,
             // リスト未定義箇所
-            itemCount: children.length,
+            itemCount: userObject.length,
             itemBuilder: (_, int index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -54,7 +54,7 @@ class ActiveUserList extends ConsumerWidget {
                   child: SizedBox(
                     width: 120,
                     height: 120,
-                    child: children[index],
+                    child: userObject[index],
 
                     // child: children[index],
                   ),
