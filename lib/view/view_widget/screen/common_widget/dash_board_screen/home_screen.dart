@@ -23,7 +23,7 @@ class Home extends ConsumerWidget {
                 child: Image.asset('assets/imgs/appLogo.png'),
               ),
               const Padding(
-                padding: EdgeInsets.only(top: 10, left: 30, bottom: 20),
+                padding: EdgeInsets.only(top: 10, left: 50, bottom: 20),
                 child: Row(
                   children: [
                     Column(
@@ -31,7 +31,7 @@ class Home extends ConsumerWidget {
                         Icon(Icons.face_unlock_outlined,
                             color: Colors.orangeAccent),
                         Text(
-                          "会話人数",
+                          "会話",
                           style: TextStyle(
                             color: Colors.orangeAccent,
                           ),
@@ -43,12 +43,12 @@ class Home extends ConsumerWidget {
                       ],
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 30.0),
+                      padding: EdgeInsets.only(left: 70.0),
                       child: Column(
                         children: [
                           Icon(Icons.groups_outlined, color: Colors.cyan),
                           Text(
-                            "グループセッション",
+                            "気になる",
                             style: TextStyle(
                               color: Colors.cyan,
                             ),
@@ -63,7 +63,7 @@ class Home extends ConsumerWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 30.0),
+                      padding: EdgeInsets.only(left: 50.0),
                       child: Column(
                         children: [
                           Icon(Icons.payments_outlined, color: Colors.red),
