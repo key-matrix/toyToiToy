@@ -1,12 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../providers.dart';
 
-class MyPage extends ConsumerWidget {
-  const MyPage({Key? key}) : super(key: key);
+class SelectedUser extends ConsumerWidget {
+  const SelectedUser({Key? key}) : super(key: key);
 
+  //ホームから他ユーザをタップした際の画面
+
+  //todo ボトムナビ使用へ変更’(提供資材使用)
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final userName = ref.watch(loginUserProvider);
