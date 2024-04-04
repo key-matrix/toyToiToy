@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:marie_app/view/view_widget/common_widget/parts/list/user_list.dart';
 
 class FavoriteUserList extends ConsumerWidget {
   const FavoriteUserList(
@@ -12,25 +11,12 @@ class FavoriteUserList extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // final List<Map<String, dynamic>> listItems = [
-    //   {
-    //     'text': 'Item 1',
-    //     'color': Colors.blue[600],
-    //   },
-    //   {
-    //     'text': 'Item 2',
-    //     'color': Colors.blue[300],
-    //   },
-    //   {
-    //     'text': 'Item 3',
-    //     'color': Colors.blue[100],
-    //   },
-    // ];
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text(
-          "お気に入り",
-          style: TextStyle(
+        Text(
+          title,
+          style: const TextStyle(
             fontSize: 20,
           ),
         ),
@@ -43,49 +29,73 @@ class FavoriteUserList extends ConsumerWidget {
             child: Row(
               children: [
                 Expanded(
+                  child: ListView.builder(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    // スクロール方向
+                    scrollDirection: Axis.horizontal,
+                    //リスト長さ
+                    itemCount: userObject.length,
+
+                    //ビルド実行
+                    itemBuilder: (_, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(60),
+                          child: SizedBox(
+                            width: 120,
+                            height: 120,
+                            child: userObject[index],
+
+                            // child: children[index],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
                   // TODO ModelからAPI経由でインスタンスループ,　ListView.builder　へ変更
                   //  　お気に入りユーザーを横スクロール対応で表示
-                  child: ListView(
-                    children: const <Widget>[
-                      //-------------------------------------------------User1
-                      ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/imgs/user_icon.png'),
-                          radius: 40,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 22),
-                        child: Text(
-                          "Jane Doe",
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.pinkAccent,
-                          ),
-                        ),
-                      ),
-
-                      //-------------------------------------------------User2
-                      ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/imgs/user_icon.png'),
-                          radius: 40,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 22),
-                        child: Text(
-                          "Jane Doe",
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.pinkAccent,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  // child: ListView(
+                  //   children: const <Widget>[
+                  //     //-------------------------------------------------User1
+                  //     ListTile(
+                  //       leading: CircleAvatar(
+                  //         backgroundImage:
+                  //             AssetImage('assets/imgs/user_icon.png'),
+                  //         radius: 40,
+                  //       ),
+                  //     ),
+                  //     Padding(
+                  //       padding: EdgeInsets.only(left: 22),
+                  //       child: Text(
+                  //         "Jane Doe",
+                  //         style: TextStyle(
+                  //           fontSize: 15,
+                  //           color: Colors.pinkAccent,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //
+                  //     //-------------------------------------------------User2
+                  //     ListTile(
+                  //       leading: CircleAvatar(
+                  //         backgroundImage:
+                  //             AssetImage('assets/imgs/user_icon.png'),
+                  //         radius: 40,
+                  //       ),
+                  //     ),
+                  //     Padding(
+                  //       padding: EdgeInsets.only(left: 22),
+                  //       child: Text(
+                  //         "Jane Doe",
+                  //         style: TextStyle(
+                  //           fontSize: 15,
+                  //           color: Colors.pinkAccent,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                 ),
               ],
             ),
