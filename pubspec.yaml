@@ -13,6 +13,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   #  状態管理
   flutter_riverpod: ^2.5.1
+  #    hooks
+  flutter_hooks: ^0.20.5
   # チャートライブラリ
   fl_chart: ^0.67.0
   #マーキー(文字流れ再生Liv)
