@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+
   cupertino_icons: ^1.0.6
   #  状態管理
   flutter_riverpod: ^2.5.1
@@ -39,6 +40,10 @@ flutter_icons:
   image_path: "assets/imgs/app_icon.png"
 
 flutter:
+  fonts:
+    - family: JpFont #名前をつけてあげる
+      fonts:
+        - asset: font/Noto_Sans_JP/static/NotoSansJP-Light.ttf #fontsのassets:に.ttfファイルを追加
   uses-material-design: true
   #資材path
   assets:
