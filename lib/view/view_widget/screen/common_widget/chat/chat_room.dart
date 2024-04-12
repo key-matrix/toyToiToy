@@ -18,6 +18,8 @@ class ChatRoom extends ConsumerStatefulWidget {
 class ChatRoomState extends ConsumerState<ChatRoom> {
   final List<types.Message> _messages = [];
 
+  // -------------------------------------------------------------------------------User定義
+
   final _user = const types.User(
     id: '82091008-a484-4a89-ae75-a22bf8d6f3ac',
     firstName: "",
@@ -26,7 +28,6 @@ class ChatRoomState extends ConsumerState<ChatRoom> {
         "https://github.com/key-matrix/toyToiToy/blob/UI-mock-Impl01/assets/imgs/profile_icon_round.png?raw=true",
   );
 
-  // -------------------------------------------------------------------------------追加
   final _other = const types.User(
     id: '72091065-a484-4a89-ae75-a22bf8d6f3ac',
     firstName: "金",
@@ -37,25 +38,52 @@ class ChatRoomState extends ConsumerState<ChatRoom> {
 
   @override
   void initState() {
+    // -------------------------------------------------------------------------------MSGInit
+    //TODO　会話履歴をDBから取得
     super.initState();
-    _addMessage(types.TextMessage(
-      author: _other,
-      createdAt: DateTime.now().millisecondsSinceEpoch,
-      id: randomString(),
-      text: "お話がしたいです。",
-    ));
-  }
+    _addMessage(
+      types.TextMessage(
+        author: _other,
+        createdAt: DateTime.now()
+            .add(const Duration(hours: 26, minutes: 17) * -1)
+            .millisecondsSinceEpoch,
+        id: randomString(),
+        text: "お話できますか？",
+      ),
+    );
+    _addMessage(
+      types.TextMessage(
+        author: _user,
+        createdAt: DateTime.now()
+            .add(const Duration(hours: 2) * -1)
+            .millisecondsSinceEpoch,
+        id: randomString(),
+        text: "どんなお話でしょうか？",
+      ),
+    );
 
-  // -------------------------------------------------------------------------------追加
+    _addMessage(
+      types.TextMessage(
+        author: _other,
+        createdAt: DateTime.now()
+            .add(const Duration(minutes: 2) * -1)
+            .millisecondsSinceEpoch,
+        id: randomString(),
+        text: "会ってお話しましょう",
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+          backgroundColor: Colors.deepOrangeAccent,
           appBar: const PreferredSize(
             preferredSize: Size.fromHeight(50),
             child: CommonStaticAppbar("チャットルーム"),
           ),
+
           // endDrawer: const CommonDrawer(),
           body: SafeArea(
               child: Chat(
