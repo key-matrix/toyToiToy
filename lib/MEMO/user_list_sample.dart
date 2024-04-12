@@ -6,13 +6,6 @@ class UserList extends ConsumerWidget {
 
   final String listName;
 
-  //userList
-  // final List<String> listItems = [
-  //   'Item 1',
-  //   'Item 2',
-  //   'Item 3',
-  // ];
-
   //アクティブ,お気にユーザリストクラス
   @override
   Widget build(BuildContext context, WidgetRef ref) {

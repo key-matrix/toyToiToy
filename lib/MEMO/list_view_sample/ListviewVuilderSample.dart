@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
     },
   ];
 
+  MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,31 +30,31 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Container(
               height: 125,
-              padding: EdgeInsets.all(4),
+              padding: const EdgeInsets.all(4),
               // childrenを指定してリスト表示
               child: ListView(
                 children: <Widget>[
                   Container(
                     height: 50,
                     color: Colors.blue[600],
-                    child: Text('Item 1'),
+                    child: const Text('Item 1'),
                   ),
                   Container(
                     height: 50,
                     color: Colors.blue[300],
-                    child: Text('Item 2'),
+                    child: const Text('Item 2'),
                   ),
                   Container(
                     height: 50,
                     color: Colors.blue[100],
-                    child: Text('Item 3'),
+                    child: const Text('Item 3'),
                   ),
                 ],
               ),
             ),
             Container(
               height: 125,
-              padding: EdgeInsets.all(4),
+              padding: const EdgeInsets.all(4),
               // 配列を元にリスト表示
               child: ListView.builder(
                 itemCount: listItems.length,
@@ -67,7 +69,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               height: 125,
-              padding: EdgeInsets.all(4),
+              padding: const EdgeInsets.all(4),
               // 各アイテムの間にスペースなどを挟みたい場合
               child: ListView.separated(
                 itemCount: listItems.length,
@@ -79,7 +81,7 @@ class MyApp extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (context, index) {
-                  return Divider();
+                  return const Divider();
                 },
               ),
             ),

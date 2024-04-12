@@ -1,6 +1,6 @@
-//メッセージデータ格納モデル
-
 class Message {
+  //メッセージデータ格納モデル
+
   final String sender;
   final String text;
   final DateTime timestamp;

@@ -9,6 +9,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_chat_types: ^3.6.2
+  #ちゃっとUI
+  flutter_chat_ui: ^1.6.12
 
   cupertino_icons: ^1.0.6
   #  状態管理

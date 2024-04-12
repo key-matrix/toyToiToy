@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:marie_app/view/view_widget/screen/common_widget/message/send_message_provider.dart';
+import 'package:marie_app/MEMO/message_samplpe/send_message_bar.dart';
 
 import '../../../../../providers.dart';
 import 'message_bubble.dart';

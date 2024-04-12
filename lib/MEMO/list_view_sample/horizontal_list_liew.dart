@@ -21,13 +21,13 @@ class HorizontalListView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
               title,
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),
           SizedBox(
             height: 150,
             child: ListView.builder(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               scrollDirection: Axis.horizontal,
               itemCount: children.length,
               itemBuilder: (_, int index) {

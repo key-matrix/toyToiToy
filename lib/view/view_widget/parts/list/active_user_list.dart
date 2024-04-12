@@ -33,9 +33,7 @@ class ActiveUserList extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8),
             scrollDirection: Axis.horizontal,
             // リスト未定義箇所
-
             itemCount: userObject.length,
-
             itemBuilder: (_, int index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -45,8 +43,6 @@ class ActiveUserList extends ConsumerWidget {
                     width: 120,
                     height: 120,
                     child: userObject[index],
-
-                    // child: children[index],
                   ),
                 ),
               );

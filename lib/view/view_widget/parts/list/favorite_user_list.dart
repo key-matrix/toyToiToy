@@ -21,7 +21,8 @@ class FavoriteUserList extends ConsumerWidget {
           ),
         ),
         SingleChildScrollView(
-          scrollDirection: Axis.horizontal, // スクロールの向きを水平方向に指定
+          scrollDirection: Axis.horizontal,
+          // スクロールの向きを水平方向に指定
           //お気に入りユーザーを横スクロール対応で表示
           child: SizedBox(
             height: 130,
@@ -35,7 +36,6 @@ class FavoriteUserList extends ConsumerWidget {
                     scrollDirection: Axis.horizontal,
                     //リスト長さ
                     itemCount: userObject.length,
-
                     //ビルド実行
                     itemBuilder: (_, int index) {
                       return Padding(
@@ -54,48 +54,6 @@ class FavoriteUserList extends ConsumerWidget {
                     },
                   ),
                   // TODO ModelからAPI経由でインスタンスループ,　ListView.builder　へ変更
-                  //  　お気に入りユーザーを横スクロール対応で表示
-                  // child: ListView(
-                  //   children: const <Widget>[
-                  //     //-------------------------------------------------User1
-                  //     ListTile(
-                  //       leading: CircleAvatar(
-                  //         backgroundImage:
-                  //             AssetImage('assets/imgs/user_icon.png'),
-                  //         radius: 40,
-                  //       ),
-                  //     ),
-                  //     Padding(
-                  //       padding: EdgeInsets.only(left: 22),
-                  //       child: Text(
-                  //         "Jane Doe",
-                  //         style: TextStyle(
-                  //           fontSize: 15,
-                  //           color: Colors.pinkAccent,
-                  //         ),
-                  //       ),
-                  //     ),
-                  //
-                  //     //-------------------------------------------------User2
-                  //     ListTile(
-                  //       leading: CircleAvatar(
-                  //         backgroundImage:
-                  //             AssetImage('assets/imgs/user_icon.png'),
-                  //         radius: 40,
-                  //       ),
-                  //     ),
-                  //     Padding(
-                  //       padding: EdgeInsets.only(left: 22),
-                  //       child: Text(
-                  //         "Jane Doe",
-                  //         style: TextStyle(
-                  //           fontSize: 15,
-                  //           color: Colors.pinkAccent,
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
                 ),
               ],
             ),
