@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-//　TODO 未完成チャットリスト画面
+//　TODO メッセージリスト画面「メッセージ中のリスト取得(名前,アイコン,最後のメッセージ)」
 
 class ChatList extends ConsumerStatefulWidget {
-  const ChatList({Key? key, required this.userList}) : super(key: key);
-
-  // UserList
-  final List<Widget> userList;
+  const ChatList({Key? key}) : super(key: key);
 
   @override
   ChatTopState createState() => ChatTopState();
 }
-
 // todo 1　チャット中のUserリスト作成(ListViewViewBuilder{動的リスト})
 // todo 2　リスト押下で　chat_room() へ遷移
 
 class ChatTopState extends ConsumerState<ChatList> {
+  final List<Widget> chatList = [];
+
   @override
   Widget build(BuildContext context) {
-    var userList;
+    // var chatList = this.chatList;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -41,7 +39,7 @@ class ChatTopState extends ConsumerState<ChatList> {
                     // スクロール方向
                     scrollDirection: Axis.horizontal,
                     //リスト長さ
-                    itemCount: userList.length,
+                    itemCount: chatList.length,
                     //ビルド実行
                     itemBuilder: (_, int index) {
                       return Padding(
@@ -51,7 +49,7 @@ class ChatTopState extends ConsumerState<ChatList> {
                           child: SizedBox(
                             width: 120,
                             height: 120,
-                            child: userList[index],
+                            child: chatList[index],
 
                             // child: children[index],
                           ),
