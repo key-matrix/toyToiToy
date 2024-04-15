@@ -8,9 +8,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  flutter_chat_types: ^3.6.2
+  #ちゃっとUI
+  flutter_chat_ui: ^1.6.12
+
   cupertino_icons: ^1.0.6
   #  状態管理
   flutter_riverpod: ^2.5.1
+  #    hooks
+  flutter_hooks: ^0.20.5
   # チャートライブラリ
   fl_chart: ^0.67.0
   #マーキー(文字流れ再生Liv)
@@ -38,4 +45,11 @@ flutter_icons:
   image_path: "assets/imgs/app_icon.png"
 
 flutter:
+  fonts:
+    - family: JpFont #名前をつけてあげる
+      fonts:
+        - asset: font/Noto_Sans_JP/static/NotoSansJP-Light.ttf #fontsのassets:に.ttfファイルを追加
   uses-material-design: true
+  #資材path
+  assets:
+    - assets/imgs/
