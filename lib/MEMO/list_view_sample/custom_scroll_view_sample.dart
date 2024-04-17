@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../view/view_widget/parts/list/image_urls_sample.dart';
+import '../../model/url/image_urls_sample.dart';
 import 'horizontal_list_liew.dart';
 
 void main() {
