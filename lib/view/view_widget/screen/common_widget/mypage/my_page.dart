@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:marie_app/view/view_widget/screen/common_widget/settings/setting_top.dart';
+import 'package:marie_app/view/view_widget/screen/login/login_top.dart';
 
 import '../../../../../providers.dart';
+import '../../../parts/modal.dart';
+import '../../app_top.dart';
 
 class MyPage extends ConsumerWidget {
   const MyPage({Key? key}) : super(key: key);
@@ -66,7 +70,15 @@ class MyPage extends ConsumerWidget {
                     ListTile(
                       title: const Text('お気に入り'),
                       onTap: () {
-                        // 履歴画面へ遷移
+                        // お気に入り画面へ遷移
+                        Modal.commonCloseModal(
+                          context,
+                          "お気に入り",
+                          "画面未実装です。",
+                          ref,
+                          // exeAction(context, ref),
+                          // cxlAction(context, ref),
+                        );
                       },
                     ),
                     // 履歴
@@ -74,42 +86,92 @@ class MyPage extends ConsumerWidget {
                       title: const Text('取引履歴'),
                       onTap: () {
                         // 履歴画面へ遷移
+                        Modal.commonCloseModal(
+                          context,
+                          "取引履歴",
+                          "画面未実装です。",
+                          ref,
+                          // exeAction(context, ref),
+                          // cxlAction(context, ref),
+                        );
                       },
                     ),
                     ListTile(
                       title: const Text('売り上げ確認'),
                       onTap: () {
-                        // 履歴画面へ遷移
+                        Modal.commonCloseModal(
+                          context,
+                          "売り上げ確認",
+                          "画面未実装です。",
+                          ref,
+                          // exeAction(context, ref),
+                          // cxlAction(context, ref),
+                        );
                       },
                     ),
                     ListTile(
                       title: const Text('振り込み申請'),
                       onTap: () {
-                        // 履歴画面へ遷移
+                        Modal.commonCloseModal(
+                          context,
+                          "振り込み申請",
+                          "画面未実装です。",
+                          ref,
+                          // exeAction(context, ref),
+                          // cxlAction(context, ref),
+                        );
                       },
                     ),
                     ListTile(
                       title: const Text('興味ありUser'),
                       onTap: () {
-                        // 履歴画面へ遷移
+                        Modal.commonCloseModal(
+                          context,
+                          "興味ありUser",
+                          "画面未実装です。",
+                          ref,
+                          // exeAction(context, ref),
+                          // cxlAction(context, ref),
+                        );
                       },
                     ),
                     ListTile(
                       title: const Text('利用ガイド'),
                       onTap: () {
-                        // 履歴画面へ遷移
+                        Modal.commonCloseModal(
+                          context,
+                          "利用ガイド",
+                          "画面未実装です。",
+                          ref,
+                          // exeAction(context, ref),
+                          // cxlAction(context, ref),
+                        );
                       },
                     ),
                     ListTile(
                       title: const Text('問い合わせ'),
                       onTap: () {
-                        // 履歴画面へ遷移
+                        Modal.commonCloseModal(
+                          context,
+                          "問い合わせ",
+                          "画面未実装です。",
+                          ref,
+                          // exeAction(context, ref),
+                          // cxlAction(context, ref),
+                        );
                       },
                     ),
                     ListTile(
                       title: const Text('意見書'),
                       onTap: () {
-                        // 履歴画面へ遷移
+                        Modal.commonCloseModal(
+                          context,
+                          "意見書",
+                          "画面未実装です。",
+                          ref,
+                          // exeAction(context, ref),
+                          // cxlAction(context, ref),
+                        );
                       },
                     ),
 
@@ -118,6 +180,13 @@ class MyPage extends ConsumerWidget {
                       title: const Text('設定'),
                       onTap: () {
                         // 設定画面へ遷移
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            // todo プロフィール画面へ遷移
+                            builder: (context) => const SettingTop(),
+                          ),
+                        );
                       },
                     ),
                     // ログアウト
@@ -125,12 +194,36 @@ class MyPage extends ConsumerWidget {
                       title: const Text('ログアウト'),
                       onTap: () {
                         // ログアウト処理
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            // todo プロフィール画面へ遷移
+                            builder: (context) => const LoginTop(),
+                          ),
+                        );
                       },
                     ),
                     ListTile(
                       title: const Text('退会'),
                       onTap: () {
-                        // ログアウト処理
+                        Modal.commonModal(
+                          context,
+                          "警告",
+                          "退会すると全ての情報が失われます",
+                          ref,
+                          (p0, p1) => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginTop(),
+                            ),
+                          ),
+                          (p0, p1) => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AppTop(),
+                            ),
+                          ),
+                        );
                       },
                     ),
                   ],
