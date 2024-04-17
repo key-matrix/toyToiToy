@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../view_functions.dart';
+import '../../view_functions.dart';
 
-import '../../../parts/drawer.dart';
-import '../../../parts/list/icon_list/active_user_list.dart';
-import '../../../parts/list/icon_list/favorite_user_list.dart';
+import '../parts/drawer.dart';
+import '../parts/user_list/icon_list/active_user_list.dart';
+import '../parts/user_list/icon_list/favorite_user_list.dart';
 
 class Home extends ConsumerWidget {
   const Home({Key? key}) : super(key: key);

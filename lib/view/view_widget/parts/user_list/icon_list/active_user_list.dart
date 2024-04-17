@@ -12,7 +12,7 @@ class ActiveUserList extends ConsumerWidget {
   final String title;
   final List<Widget> userObject;
 
-  final List<String> userName = ["ピエロ", "Lif", "Kamo", "プーチン", "金正恩"];
+  final List<String> userName = ["ピエロ", "Lif", "Kamo", "プーチン", "金 正恩"];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
