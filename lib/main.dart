@@ -5,7 +5,7 @@ import 'package:marie_app/view/view_widget/screen/login/login_top.dart';
 
 void main() {
   runApp(
-    //監視対象
+    //riverPod監視対象
     const ProviderScope(
       child: MyApp(),
     ),
@@ -18,6 +18,7 @@ class MyApp extends ConsumerWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    debugPrint("App起動");
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //プロバイダ参照
