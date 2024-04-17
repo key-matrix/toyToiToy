@@ -38,7 +38,7 @@ class Home extends ConsumerWidget {
                         ),
                       ),
                       Text(
-                        "5人",
+                        "1人",
                         style: TextStyle(fontSize: 18),
                       ),
                     ],
