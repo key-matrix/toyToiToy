@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 //HOME画面上にて表示されるUserList
 class ActiveUserList extends ConsumerWidget {
-  const ActiveUserList({
+  ActiveUserList({
     Key? key,
     required this.title,
     required this.userObject,
@@ -11,6 +11,8 @@ class ActiveUserList extends ConsumerWidget {
 
   final String title;
   final List<Widget> userObject;
+
+  final List<String> userName = ["ピエロ", "Lif", "Kamo", "プーチン", "金正恩"];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -28,7 +30,7 @@ class ActiveUserList extends ConsumerWidget {
           ),
         ),
         SizedBox(
-          height: 130,
+          height: 160,
           child: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             scrollDirection: Axis.horizontal,
@@ -37,13 +39,18 @@ class ActiveUserList extends ConsumerWidget {
             itemBuilder: (_, int index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(60),
-                  child: SizedBox(
-                    width: 120,
-                    height: 120,
-                    child: userObject[index],
-                  ),
+                child: Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(60),
+                      child: SizedBox(
+                        width: 120,
+                        height: 120,
+                        child: userObject[index],
+                      ),
+                    ),
+                    Text(userName[index]),
+                  ],
                 ),
               );
             },

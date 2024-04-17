@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class FavoriteUserList extends ConsumerWidget {
-  const FavoriteUserList(
-      {Key? key, required this.title, required this.userObject})
+  FavoriteUserList({Key? key, required this.title, required this.userObject})
       : super(key: key);
 
   final String title;
   final List<Widget> userObject;
+
+  final List<String> userName = ["ミランダ", "KEN", "Yoshua", "タモリ", "USF"];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,7 +26,7 @@ class FavoriteUserList extends ConsumerWidget {
           // スクロールの向きを水平方向に指定
           //お気に入りユーザーを横スクロール対応で表示
           child: SizedBox(
-            height: 130,
+            height: 160,
             width: 1000,
             child: Row(
               children: [
@@ -40,15 +41,18 @@ class FavoriteUserList extends ConsumerWidget {
                     itemBuilder: (_, int index) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(60),
-                          child: SizedBox(
-                            width: 120,
-                            height: 120,
-                            child: userObject[index],
-
-                            // child: children[index],
-                          ),
+                        child: Column(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(60),
+                              child: SizedBox(
+                                width: 120,
+                                height: 120,
+                                child: userObject[index],
+                              ),
+                            ),
+                            Text(userName[index]),
+                          ],
                         ),
                       );
                     },

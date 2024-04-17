@@ -25,7 +25,7 @@ class ChatRoomState extends ConsumerState<ChatRoom> {
     firstName: "",
     lastName: "Marie",
     imageUrl:
-        "https://github.com/key-matrix/toyToiToy/blob/UI-mock-Impl01/assets/imgs/profile_icon_round.png?raw=true",
+        "https://github.com/key-matrix/toyToiToy/blob/UI-mock-phase01/assets/imgs/profile_icon_round.png?raw=true",
   );
 
   final _other = const types.User(
@@ -33,7 +33,7 @@ class ChatRoomState extends ConsumerState<ChatRoom> {
     firstName: "金",
     lastName: "正恩",
     imageUrl:
-        "https://github.com/key-matrix/toyToiToy/blob/UI-mock-Impl01/assets/imgs/user_icons/onlineUser05.jpeg?raw=true",
+        "https://github.com/key-matrix/toyToiToy/blob/UI-mock-phase01/assets/imgs/user_icons/onlineUser05.jpeg?raw=true",
   );
 
   @override
@@ -58,7 +58,7 @@ class ChatRoomState extends ConsumerState<ChatRoom> {
             .add(const Duration(hours: 2) * -1)
             .millisecondsSinceEpoch,
         id: randomString(),
-        text: "どんなお話でしょうか？",
+        text: "なんでしょうか？",
       ),
     );
 
@@ -69,7 +69,18 @@ class ChatRoomState extends ConsumerState<ChatRoom> {
             .add(const Duration(minutes: 2) * -1)
             .millisecondsSinceEpoch,
         id: randomString(),
-        text: "会ってお話しましょう",
+        text: "会って話しましょう",
+      ),
+    );
+
+    _addMessage(
+      types.TextMessage(
+        author: _other,
+        createdAt: DateTime.now()
+            .add(const Duration(minutes: 2) * -1)
+            .millisecondsSinceEpoch,
+        id: randomString(),
+        text: "迎えに行きます。",
       ),
     );
   }
