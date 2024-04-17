@@ -18,7 +18,7 @@ class MyApp extends ConsumerWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    debugPrint("App起動");
+    debugPrint("---App起動---${DateTime.now()}");
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //プロバイダ参照
