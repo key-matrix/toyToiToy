@@ -25,7 +25,7 @@ class ChatRoomState extends ConsumerState<ChatRoom> {
     firstName: "",
     lastName: "Marie",
     imageUrl:
-        "https://github.com/key-matrix/toyToiToy/blob/UI-mock-phase01/assets/imgs/profile_icon_round.png?raw=true",
+        "https://github.com/key-matrix/toyToiToy/blob/UI-mockMaster/assets/imgs/profile_icon_round.png?raw=true",
   );
 
   final _other = const types.User(
@@ -33,7 +33,7 @@ class ChatRoomState extends ConsumerState<ChatRoom> {
     firstName: "金",
     lastName: "正恩",
     imageUrl:
-        "https://github.com/key-matrix/toyToiToy/blob/UI-mock-phase01/assets/imgs/user_icons/onlineUser05.jpeg?raw=true",
+        "https://github.com/key-matrix/toyToiToy/blob/UI-mockMaster/assets/imgs/user_icons/onlineUser05.jpeg?raw=true",
   );
 
   @override
