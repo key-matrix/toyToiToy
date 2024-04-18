@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../screen/common_widget/selected_user/selected_user.dart';
+
 class FavoriteUserList extends ConsumerWidget {
   FavoriteUserList({Key? key, required this.title, required this.userObject})
       : super(key: key);
@@ -43,12 +45,25 @@ class FavoriteUserList extends ConsumerWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(60),
-                              child: SizedBox(
-                                width: 120,
-                                height: 120,
-                                child: userObject[index],
+                            GestureDetector(
+                              //TODO 各UserPageへ遷移
+                              onTap: () {
+                                //  UserMyPageへ遷移　　MessageScreen
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    //メッセージトップ画面(リスト画面)へ遷移
+                                    builder: (context) => const SelectedUser(),
+                                  ),
+                                );
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(60),
+                                child: SizedBox(
+                                  width: 120,
+                                  height: 120,
+                                  child: userObject[index],
+                                ),
                               ),
                             ),
                             Text(userName[index]),
