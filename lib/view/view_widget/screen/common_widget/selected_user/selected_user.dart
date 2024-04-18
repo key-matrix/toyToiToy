@@ -50,12 +50,12 @@ class SelectedUser extends ConsumerWidget {
         children: [
           // const SizedBox(height: 5),
           // プロフィール画像
-          CircleAvatar(
+          const CircleAvatar(
             radius: 50.0,
             backgroundColor: Colors.deepPurpleAccent,
 
             backgroundImage: NetworkImage(
-              ImageUrls.onlineUserList[4],
+              "https://github.com/key-matrix/toyToiToy/blob/UI-mockMaster/assets/imgs/user_icons/kishidaFumio.jpeg?raw=true",
             ),
             // foregroundImage:
             //     Image.asset("assets/imgs/user_icons/kishidaFumio.jpeg"),

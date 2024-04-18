@@ -15,7 +15,4 @@ class ImageUrls {
     "https://github.com/key-matrix/toyToiToy/blob/UI-mockMaster/assets/imgs/user_icons/onlineUser09.jpeg?raw=true",
     "https://github.com/key-matrix/toyToiToy/blob/UI-mockMaster/assets/imgs/user_icons/onlineUser10.jpeg?raw=true",
   ];
-
-  static String userIcon =
-      "https://github.com/key-matrix/toyToiToy/blob/UI-mockMaster/assets/imgs/user_icons/kishidaFumio.jpeg?raw=true";
 }
